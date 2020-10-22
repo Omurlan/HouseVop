@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+
+body {
+    color: white;
+    background-color: #242c33;
+    margin: 0;
+}
+
+
+
+
+/* Header */
+
+.header {
+    background:url('../img/Rectangle.png');
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    background: url('../img/first-screen__logo.svg');
+    width: 134px;
+    height: 64px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style-type: none;
+    
+    font-family: Raleway, serif;
+}
+
+.navbar-item {
+    margin-right: 15px;
+}
+
+.head-welcome {
+    margin-top: 260px;
+}
+
+.head-welcome-title {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #D4C17F;
+     
+}
+
+.header-mouse {
+    background: url('../img/mouse.svg');
+    width: 40px;
+    height: 40px;
+    margin: 150px auto;
+}
+
+.header-contacts {
+    display: flex;
+    justify-content: space-evenly;
+    
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* First section */
+
+.first-section {
+    margin-top: 120px;
+}
+
+.first-section__places {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.first-section__places_item {
+    text-align: center;
+    margin: 0 40px;
+}
+
+.img-absolute {
+    position: absolute;
+    right: -100px;
+    top: -30px;
+}
+
+
+/* Secon-Section */
+
+.second-section {
+    position: relative;
+}
+
+.second-section h2 {
+    color: #D4C17F;
+    
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+}
+
+.img-absolute-2 {
+    position: absolute;
+    top: 45px;
+    left: 5px;
+}
+
+.second-section__gallery img {
+    max-width: 450px;
+}
+
+.second-section__gallery-1, .second-section__gallery-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-1__item, .gallery-2__item {
+    position: relative;
+}
+
+.second-section span{
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Footer */
+
+.footer {
+    background: url('../img/Rectangle%20(3).jpg');
+    height: 450px;;
+    margin-top: 100px;
+
+}
+
+.footer h2 {
+    color: #D4C17F;
+    
+    font-size: 36px; 
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left-side {
+    width: 50%;
+    
+}
+
+.right-side {
+    width: 50%;
+}
+
+.inputs-1 {
+    display: flex;
+}
+
+.input-name {
+    height: 51px;
+    width: 255px;
+    background-color: rgba(105, 103, 103, 0.5);
+    color: white;
+    margin: 10px;
+    border: none;
+    text-align: center;
+}
+
+.input-tel {
+    height: 51px;
+    width: 255px;
+    background-color: rgba(105, 103, 103, 0.5);
+    color: white;
+    margin: 10px;
+    border: none;
+    text-align: center;
+}
+
+.inputs-2 {
+    display: flex;
+}
+
+.info {
+   margin: 10px;
+   height: 51px;
+   width: 255px;
+   font-size: 14px;
+   text-align: center;
+}
+
+.button {
+    height: 51px;
+    width: 255px;
+    
+    background-color: rgba(227, 162, 40, 0.8);
+    color: white;
+    
+    margin: 10px;
+    border: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgba(206, 154, 53, 0.8);
+    transition: background-color 0.1s;
+    cursor: pointer;
+}
+
+
+/* Hamburger-menu start*/
+
+  #menu__toggle {
+      opacity: 0;
+  }
+
+  .menu__btn {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      visibility: hidden;
+      top: 40px;
+      right: 20px;
+      cursor: pointer;
+      width: 26px;
+      height: 26px;
+      z-index: 2;
+  }
+
+  .menu__btn > span,
+  .menu__btn > span:before,
+  .menu__btn > span:after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+  }
+
+.menu__btn > span::before {
+    content: "";
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: "";
+    top: 8px;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+}
+
+
+/* Hamburger menu end */
+
+@media all and (max-width: 768px) {
+    .menu__btn {
+        visibility: visible;
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 88px 0;
+        text-align: center;
+        background-color: slategray;
+        z-index: 1;
+    }
+
+    .navbar-item {
+        display: block;
+        padding: 12px 24px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .navbar-item:hover {
+        background-color: snow;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+}
