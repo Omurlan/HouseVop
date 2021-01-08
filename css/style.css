@@ -12,11 +12,13 @@ body {
 /* Header */
 
 .header {
-    background:url('../img/Rectangle.png');
+    background:url('../img/Rectangle.png') no-repeat;
+    background-size: cover;
 }
 
 .container {
     max-width: 960px;
+    padding: 20px;
     margin: 0 auto;
 }
 
@@ -49,9 +51,9 @@ body {
 .head-welcome-title {
     font-size: 48px;
     text-align: center;
+    flex-wrap: wrap;
     font-family: 'Playfair Display', serif;
-    color: #D4C17F;
-     
+    color: #D4C17F;  
 }
 
 .header-mouse {
@@ -76,9 +78,10 @@ body {
 }
 
 .first-section__places {
-    display: flex;
-    justify-content: center;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 
@@ -89,8 +92,8 @@ body {
 
 .img-absolute {
     position: absolute;
-    right: -100px;
-    top: -30px;
+
+
 }
 
 
@@ -98,6 +101,13 @@ body {
 
 .second-section {
     position: relative;
+    flex-wrap: wrap;
+}
+
+.second-section__gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .second-section h2 {
@@ -120,6 +130,7 @@ body {
 .second-section__gallery-1, .second-section__gallery-2 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .gallery-1__item, .gallery-2__item {
@@ -138,7 +149,8 @@ body {
 /* Footer */
 
 .footer {
-    background: url('../img/Rectangle%20(3).jpg');
+    background: url('../img/Rectangle%20(3).jpg') no-repeat;
+    background-size: cover;
     height: 450px;;
     margin-top: 100px;
 
@@ -161,9 +173,9 @@ body {
     
 }
 
-.right-side {
+/* .right-side {
     width: 50%;
-}
+} */
 
 .inputs-1 {
     display: flex;
@@ -191,6 +203,7 @@ body {
 
 .inputs-2 {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .info {
@@ -276,6 +289,47 @@ body {
 #menu__toggle:checked ~ .menu__box {
     visibility: visible;
     right: 0;
+}
+
+@media screen and (max-width: 990px) {
+    .footer-text {
+        flex-wrap: wrap;
+    }
+    .left-side {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .second-section__gallery-1, .second-section__gallery-2 {
+        justify-content: center;
+    }
+    .second-section__gallery img {
+        margin-top: 30px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 742px) {
+    .first-section__places_item{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .inputs-1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+    .inputs-2 {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .head-welcome-title {
+        font-size: 35px;
+    }
 }
 
 
